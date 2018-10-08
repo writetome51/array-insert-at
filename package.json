@@ -8,16 +8,17 @@
   },
   "keywords": [
     "array",
+    "modify",
+    "insert",
+    "new",
+    "items",
     "manipulation"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "basic-data-handling": "latest",
-    "@writetome51/number-analysis-basic": "latest",
     "error-if-values-are-not-arrays": "latest",
-    "@writetome51/array-and-index-validation": "latest",
-    "@writetome51/get-rounded-up-down": "latest"
+    "@writetome51/array-and-index-validation": "latest"
   }
 }
