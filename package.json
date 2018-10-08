@@ -1,0 +1,23 @@
+{
+  "name": "@writetome51/array-insert-at",
+  "version": "1.0.0",
+  "description": "Function that inserts new items at a specified index in the array",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "array",
+    "manipulation"
+  ],
+  "author": "Steve Thompson",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "basic-data-handling": "latest",
+    "@writetome51/number-analysis-basic": "latest",
+    "error-if-values-are-not-arrays": "latest",
+    "@writetome51/array-and-index-validation": "latest",
+    "@writetome51/get-rounded-up-down": "latest"
+  }
+}
