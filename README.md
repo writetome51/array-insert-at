@@ -4,7 +4,7 @@ import {insertAt} from '@writetome51/array-insert-at';
 
 insertAt(index, values: any[], array): void
 
-Inserts values at a specified index in the array.   Index can be negative or positive.   
+Inserts values at specified index in the array.   Index can be negative or positive.   
 It does not remove or replace any existing items in the array.  It only increases the length.   
 
 Examples:

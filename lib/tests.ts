@@ -49,13 +49,13 @@ else console.log('test 1 failed');
 // Test 2: Make sure items will be inserted at specified index:
 insertAt(2, [7, 8], arr);
 
-if (arr[2] === 7) console.log('test 2 passed');
+if (arr[2] === 7 && arr[3] === 8) console.log('test 2 passed');
 else console.log('test 2 failed');
 
 
 // Test 3: Make sure inserting is successful if specified index is negative:
 insertAt(-1, [90], arr);
-if (arr[arr.length - 2] === 90) console.log('test 3 passed');
+if (arr[arr.length - 2] === 90 && arr[arr.length - 1] === 4) console.log('test 3 passed');
 else console.log('test 3 failed');
 
 
