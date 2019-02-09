@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-insert-at",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Function that inserts new items at a specified index in the array",
   "main": "index.js",
   "scripts": {

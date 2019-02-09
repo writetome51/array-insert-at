@@ -1,4 +1,4 @@
-import { insertAt } from './insertAt';
+import { insertAt } from './index';
 
 
 let arr = [1, 2, 3, 4];
