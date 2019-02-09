@@ -37,11 +37,3 @@ import { insertAt } from '@writetome51/array-insert-at';
 // If using ES5 JavaScript:
 var insertAt = require('@writetome51/array-insert-at').insertAt;
 ```
-
-## Loading
-```
-// if using TypeScript:
-import {insertAt} from '@writetome51/array-insert-at';
-```
-
-
