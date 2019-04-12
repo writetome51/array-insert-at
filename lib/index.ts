@@ -1,5 +1,4 @@
-import { errorIfIndexNotValid }
-	from '@writetome51/array-and-index-validation/errorIf/errorIfIndexNotValid';
+import { errorIfIndexNotValid } from 'error-if-index-not-valid';
 import { errorIfValuesAreNotArrays } from 'error-if-values-are-not-arrays';
 
 
@@ -8,15 +7,21 @@ import { errorIfValuesAreNotArrays } from 'error-if-values-are-not-arrays';
 // will be pushed to the left to make room.
 
 export function insertAt(index, values: any[], array): void {
+
 	errorIfValuesAreNotArrays([values, array]);
-	errorIfIndexNotValid(index, array);
-	// If index is negative, it needs 1 added to it so values will be inserted at proper spot.
+	errorIfIndexNotValid(index, array.length);
+
 	if (index < 0) {
+		// If index is less than -1, it needs 1 added to it so values will be inserted at proper spot.
 		if (index < -1) ++index;
-		else { // else it's -1, so values need to be at the end.
-			array.push(...values);
-			return;
-		}
+		else return __ifNegativeOne_appendValues();
 	}
 	array.splice(index, 0, ...values);
+
+
+	function __ifNegativeOne_appendValues(): void {
+		array.push(...values);
+		return;
+	}
+
 }

@@ -64,14 +64,21 @@ if (arr[arr.length - 1] === 91 && arr[arr.length - 2] === 90 && arr[arr.length -
     console.log('test 3 passed');
 else
     console.log('test 3 FAILED');
-// Test 3A: if negative index suggests new values should be placed at beginning,
+// Test 3A: Make sure inserting is successful if specified index is negative:
+arr = [1, 2, 3, 4];
+index_1.insertAt(-2, [90, 91], arr);
+if (arr[arr.length - 2] === 91 && arr[arr.length - 3] === 90 && arr[arr.length - 1] === 4)
+    console.log('test 3A passed');
+else
+    console.log('test 3A FAILED');
+// Test 3B: if negative index suggests new values should be placed at beginning,
 // make sure existing item gets pushed to left:
 arr = [1, 2, 3, 4];
 index_1.insertAt(-4, [90, 91], arr);
 if (arr.length === 6 && arr[0] === 1 && arr[1] === 90 && arr[2] === 91)
-    console.log('test 3A passed');
+    console.log('test 3B passed');
 else
-    console.log('test 3A FAILED');
+    console.log('test 3B FAILED');
 // Test 4: Make sure error is triggered if specified index doesn't exist:
 errorsTriggered = 0;
 var currentLength = arr.length;
