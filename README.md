@@ -1,4 +1,4 @@
-# insertAt(index, values, array): void
+# insertAt(<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;index,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;values: any[],<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;array<br>): void
 
 At `index`, `values` are inserted in `array`.   
 `index` can be negative or positive.  If positive, existing items beginning at that index   
@@ -6,7 +6,7 @@ will be pushed to the right to make room.  If negative, existing items ending at
 index will be pushed to the left to make room.  No items get removed.
 
 ## Examples
-```
+```js
 let arr = [1,2,3,4];   
 insertAt(2, [7, 8], arr);  
 // arr is now [1,2,7,8,3,4]
@@ -21,13 +21,10 @@ insertAt(-4, [7, 8], arr);
 ```
 
 ## Installation
-`npm install @writetome51/array-insert-at`
+`npm i @writetome51/array-insert-at`
 
 
 ## Loading
-```
-// If using TypeScript:
+```js
 import { insertAt } from '@writetome51/array-insert-at';
-// If using ES5 JavaScript:
-var insertAt = require('@writetome51/array-insert-at').insertAt;
 ```

@@ -1,7 +1,8 @@
 {
   "name": "@writetome51/array-insert-at",
-  "version": "2.0.3",
+  "version": "3.0.0",
   "description": "Function that inserts new items at a specified index in the array",
+  "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -17,17 +18,19 @@
   "homepage": "https://github.com/writetome51/array-insert-at#readme",
   "keywords": [
     "array",
+    "manipulation",
+    "mutate",
     "modify",
     "insert",
+    "splice",
     "new",
-    "items",
-    "manipulation"
+    "items"
   ],
   "author": "Steve Thompson",
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "error-if-values-are-not-arrays": "~1.0.3",
-    "error-if-index-not-valid": "~1.0.0"
+    "error-if-not-array": "^2.0.0",
+    "error-if-index-not-valid": "^2.0.0"
   }
 }

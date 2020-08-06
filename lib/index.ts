@@ -1,5 +1,5 @@
 import { errorIfIndexNotValid } from 'error-if-index-not-valid';
-import { errorIfValuesAreNotArrays } from 'error-if-values-are-not-arrays';
+import { errorIfNotArray } from 'error-if-not-array';
 
 
 // index can be negative or positive.  If positive, existing items beginning at that index
@@ -7,21 +7,23 @@ import { errorIfValuesAreNotArrays } from 'error-if-values-are-not-arrays';
 // will be pushed to the left to make room.
 
 export function insertAt(index, values: any[], array): void {
-
-	errorIfValuesAreNotArrays([values, array]);
-	errorIfIndexNotValid(index, array.length);
+	validateArgs();
 
 	if (index < 0) {
-		// If index is less than -1, it needs 1 added to it so values will be inserted at proper spot.
-		if (index < -1) ++index;
+		if (index < -1) ++index; // so values will be inserted at proper spot.
 		else return __ifNegativeOne_appendValues();
 	}
 	array.splice(index, 0, ...values);
 
 
+	function validateArgs() {
+		errorIfNotArray(values);
+		errorIfIndexNotValid(index, array.length); // validates index and array.
+	}
+
+
 	function __ifNegativeOne_appendValues(): void {
 		array.push(...values);
-		return;
 	}
 
 }
