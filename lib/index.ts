@@ -6,12 +6,16 @@ import { errorIfNotArray } from 'error-if-not-array';
 // will be pushed to the right to make room.  If negative, existing items ending at that index 
 // will be pushed to the left to make room.
 
-export function insertAt(index, values: any[], array): void {
+export function insertAt<T>(
+	index: number,
+	values: T[],
+	array: T[]
+): void {
 	validateArgs();
 
 	if (index < 0) {
 		if (index < -1) ++index; // so values will be inserted at proper spot.
-		else return __ifNegativeOne_appendValues();
+		else return appendValues(values, array);
 	}
 	array.splice(index, 0, ...values);
 
@@ -22,7 +26,7 @@ export function insertAt(index, values: any[], array): void {
 	}
 
 
-	function __ifNegativeOne_appendValues(): void {
+	function appendValues(values, array): void {
 		array.push(...values);
 	}
 

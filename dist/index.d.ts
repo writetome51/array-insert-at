@@ -1,5 +1,5 @@
-export declare function insertAt(
+export declare function insertAt<T>(
 	index: number,
-	values: any[],
-	array: any[]
+	values: T[],
+	array: T[]
 ): void;

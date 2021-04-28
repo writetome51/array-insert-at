@@ -11,7 +11,7 @@ export function insertAt(index, values, array) {
 
 	if (index < 0) {
 		if (index < -1) ++index; // so values will be inserted at proper spot.
-		else return __ifNegativeOne_appendValues();
+		else return appendValues(values, array);
 	}
 	array.splice(index, 0, ...values);
 
@@ -22,7 +22,7 @@ export function insertAt(index, values, array) {
 	}
 
 
-	function __ifNegativeOne_appendValues() {
+	function appendValues(values, array) {
 		array.push(...values);
 	}
 
