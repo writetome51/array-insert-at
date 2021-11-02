@@ -1,10 +1,10 @@
 {
   "name": "@writetome51/array-insert-at",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "Function that inserts new items at a specified index in the array",
   "type": "module",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "index.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "tsc"
   },
@@ -30,7 +30,6 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
-    "error-if-index-not-valid": "^2.0.0",
-    "error-if-not-array": "^2.0.0"
+    "error-if-index-not-valid": ">=2.0.0"
   }
 }

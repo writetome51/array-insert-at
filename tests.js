@@ -1,4 +1,4 @@
-import { insertAt } from './index.js';
+import { insertAt } from 'index.d.ts';
 
 let arr = [1, 2, 3, 4];
 
@@ -112,21 +112,10 @@ else
     console.log('test 4 FAILED');
 
 
-// Test 5: Error must be triggered if anything other than array is passed as second
+// Test 5: Error must be triggered if a non-iterable type is passed as second
 // argument:
 errorsTriggered = 0;
-try {
-    insertAt(1, 'hello', arr);
-}
-catch (e) {
-    ++errorsTriggered;
-}
-try {
-    insertAt(1, '', arr);
-}
-catch (e) {
-    ++errorsTriggered;
-}
+
 try {
     insertAt(1, {}, arr);
 }
@@ -151,7 +140,7 @@ try {
 catch (e) {
     ++errorsTriggered;
 }
-if (errorsTriggered === 6)
+if (errorsTriggered === 4)
     console.log('test 5 passed');
 else
     console.log('test 5 FAILED');
