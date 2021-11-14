@@ -1,3 +1,4 @@
+import {appendMany} from '@writetome51/array-append-prepend-many';
 import {errorIfIndexNotValid} from 'error-if-index-not-valid';
 
 
@@ -10,12 +11,7 @@ export const insertAt = (index, values, array) => {
 
 	if (index < 0) {
 		if (index < -1) ++index; // so values will be inserted at proper spot.
-		else return appendValues(values, array);
+		else return appendMany(values, array);
 	}
 	array.splice(index, 0, ...values);
-
-
-	function appendValues(values, array) {
-		array.push(...values);
-	}
 };

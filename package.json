@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/array-insert-at",
-  "version": "4.0.1",
+  "version": "4.0.2",
   "description": "Function that inserts new items at a specified index in the array",
   "type": "module",
   "main": "index.js",
@@ -30,6 +30,7 @@
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {
+    "@writetome51/array-append-prepend-many": ">=0.0.1",
     "error-if-index-not-valid": ">=2.0.0"
   }
 }
